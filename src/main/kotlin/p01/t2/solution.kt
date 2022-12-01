@@ -1,5 +1,16 @@
 package p01.t2
 
-fun solution(data: List<String>) {
-
+fun solution(data: List<String>): Int {
+    return data.fold(mutableListOf(0)) { acc, line ->
+        val calories = line.toIntOrNull()
+        if (calories != null) {
+            acc[acc.lastIndex] = acc.last() + calories
+        } else {
+            acc.add(0)
+        }
+        acc
+    }.asSequence()
+        .sortedDescending()
+        .take(3)
+        .sum()
 }

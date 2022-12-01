@@ -10,12 +10,12 @@ class Run {
 
     @Test
     fun sample() {
-        assertEquals(0, resolver.sample.size)
+        assertEquals(24000, solution(resolver.sample))
     }
 
     @Test
     fun artifact() {
-
+        println("RESULT: ${solution(resolver.artifact)}")
     }
 }
 
