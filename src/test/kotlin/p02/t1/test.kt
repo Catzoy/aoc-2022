@@ -15,7 +15,7 @@ class Run {
 
     @Test
     fun artifact() {
-        println(solution(resolver.artifact))
+        assertEquals(10718, solution(resolver.artifact))
     }
 }
 
